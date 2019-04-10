@@ -1,5 +1,5 @@
 server:
-  port: 60
+  port: 6767
 
 
 eureka:
