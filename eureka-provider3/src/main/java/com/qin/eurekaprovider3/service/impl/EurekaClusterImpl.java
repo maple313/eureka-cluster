@@ -1,6 +1,6 @@
-package com.qin.eurekaprovider1.service.impl;
+package com.qin.eurekaprovider3.service.impl;
 
-import com.qin.eurekaprovider1.service.EurekaClusterService;
+import com.qin.eurekaprovider3.service.EurekaClusterService;
 
 import java.util.ArrayList;
 import java.util.List;

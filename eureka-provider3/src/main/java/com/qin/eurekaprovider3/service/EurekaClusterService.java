@@ -1,4 +1,4 @@
-package com.qin.eurekaprovider1.service;
+package com.qin.eurekaprovider3.service;
 
 import org.springframework.stereotype.Service;
 
