@@ -1,11 +1,13 @@
 package com.qin.eurekaprovider3.service.impl;
 
-import com.qin.eurekaprovider3.service.EurekaClusterService;
+import com.qin.eurekaprovider3.service.EurekaClusterService3;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EurekaClusterImpl implements EurekaClusterService {
+@Service
+public class EurekaClusterImpl implements EurekaClusterService3 {
     @Override
     public List<String> getEntity() {
         List<String> list=new ArrayList<>();

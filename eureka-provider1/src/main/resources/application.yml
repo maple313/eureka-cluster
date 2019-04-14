@@ -2,7 +2,7 @@ server:
   port: 8001
 
 mybatis:
-  type-aliases-package: com.qin.eurekaprovider2.entities    # 所有Entity别名类所在包
+  type-aliases-package: com.qin.eurekaprovider1.entities    # 所有Entity别名类所在包
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml                     # mapper映射文件
 
