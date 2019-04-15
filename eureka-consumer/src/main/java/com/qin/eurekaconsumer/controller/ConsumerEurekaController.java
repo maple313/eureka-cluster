@@ -16,13 +16,14 @@ public class ConsumerEurekaController {
 
     /*
      *服务名
+     *
      * */
     private static final String SERVICE_NAME = "http://EUREKA-PROVIDER";
 
     @RequestMapping("getProviderTest")
     public List<String> getProviderTest() {
-       Object o= restTemplate.getForObject(SERVICE_NAME+"/eurekacluster/getResult", Object.class);
-        System.out.println(o);
-        return restTemplate.getForObject(SERVICE_NAME+"/eurekacluster/getResult",List.class);
+       List<String> o= restTemplate.getForObject(SERVICE_NAME+"/eurekacluster/getResult", List.class);
+       System.out.println(o);
+       return o;
     }
 }
