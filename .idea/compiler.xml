@@ -27,13 +27,13 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eureka-consumer" options="-parameters" />
-      <module name="eureka-provider1" options="-parameters" />
-      <module name="eureka-provider2" options="-parameters" />
-      <module name="eureka-provider3" options="-parameters" />
-      <module name="eureka-server1" options="-parameters" />
-      <module name="eureka-server2" options="-parameters" />
-      <module name="eureka-server3" options="-parameters" />
+      <module name="eureka-consumer" options="" />
+      <module name="eureka-provider1" options="" />
+      <module name="eureka-provider2" options="" />
+      <module name="eureka-provider3" options="" />
+      <module name="eureka-server1" options="" />
+      <module name="eureka-server2" options="" />
+      <module name="eureka-server3" options="" />
     </option>
   </component>
 </project>
