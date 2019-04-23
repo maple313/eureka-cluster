@@ -1,5 +1,6 @@
 package com.qin.eurekaconsumer.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,10 +27,16 @@ public class ConsumerEurekaHystrixController {
     private static final String SERVICE_NAME = "http://EUREKA-PROVIDER";
 
     @RequestMapping("getProviderTest")
-    @HystrixCommand
+    @HystrixCommand(fallbackMethod ="dealExceptionByHystrix")
     public List<String> getProviderTest() {
+        //手动抛出异常，模拟断路器功能
+        int x=2/0;
         List<String> o= restTemplate.getForObject(SERVICE_NAME+"/eurekacluster/getResult", List.class);
         System.out.println(o);
         return o;
+    }
+
+    public String dealExceptionByHystrix(){
+        return  "failed !";
     }
 }
