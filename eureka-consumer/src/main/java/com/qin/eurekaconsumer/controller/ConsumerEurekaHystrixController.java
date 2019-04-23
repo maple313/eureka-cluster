@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  * @description 服务熔断
  */
 @RestController
-@RequestMapping("/consumer/")
+@RequestMapping("/hystrix/consumer/")
 public class ConsumerEurekaHystrixController {
 
     @Autowired
@@ -36,7 +37,9 @@ public class ConsumerEurekaHystrixController {
         return o;
     }
 
-    public String dealExceptionByHystrix(){
-        return  "failed !";
+    public List<String> dealExceptionByHystrix(){
+        List<String> list=new ArrayList<>();
+        list.add("hystrix测试");
+        return  list;
     }
 }
