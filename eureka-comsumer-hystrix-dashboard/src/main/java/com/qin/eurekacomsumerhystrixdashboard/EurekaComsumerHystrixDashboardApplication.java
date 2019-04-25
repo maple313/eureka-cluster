@@ -10,6 +10,7 @@ public class EurekaComsumerHystrixDashboardApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EurekaComsumerHystrixDashboardApplication.class, args);
+
     }
 
 }
