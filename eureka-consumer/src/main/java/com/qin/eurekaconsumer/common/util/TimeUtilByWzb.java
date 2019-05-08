@@ -12,10 +12,10 @@ import java.text.SimpleDateFormat;
 public class TimeUtilByWzb {
 
     /**
-     *
+     * 1
      * @description 判断时间格式: yyyy-MM-dd
      */
-    public static boolean isYyyyMMdd(String date){
+    public static boolean isYyyyMMddHyphenType(String date){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         try {
@@ -29,7 +29,99 @@ public class TimeUtilByWzb {
         return true;
     }
 
+    /**
+     * 2
+     * @description 判断时间格式: yyyy-MM-dd HH:mm:ss  HH为24小时制
+     */
+    public static boolean isYyyyMMddHHmmssHyphenType(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        try {
+            // 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+            format.setLenient(false);
+            format.parse(date);
+            System.out.println(format.parse(date));
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 3
+     * @description 判断时间格式: yyyy-MM-dd hh:mm:ss  hh为12小时制
+     */
+    public static boolean isYyyyMMddhhmmssHyphenType(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+
+        try {
+            // 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+            format.setLenient(false);
+            format.parse(date);
+            System.out.println(format.parse(date));
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 4
+     * @description 判断时间格式: yyyy/MM/dd
+     */
+    public static boolean isYyyyMMddSlashType(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+
+        try {
+            // 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+            format.setLenient(false);
+            format.parse(date);
+            System.out.println(format.parse(date));
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 5
+     * @description 判断时间格式: yyyy/MM/dd HH:mm:ss  HH为24小时制
+     */
+    public static boolean isYyyyMMddHHmmssSlashType(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+        try {
+            // 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+            format.setLenient(false);
+            format.parse(date);
+            System.out.println(format.parse(date));
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 6
+     * @description 判断时间格式: yyyy/MM/dd HH:mm:ss  hh为12小时制
+     */
+    public static boolean isYyyyMMddhhmmssSlashType(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+
+        try {
+            // 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+            format.setLenient(false);
+            format.parse(date);
+            System.out.println(format.parse(date));
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
-        boolean yyyyMMdd = isYyyyMMdd("2018-2-30");
+
+        boolean flag = isYyyyMMddHHmmssSlashType("2018/2/27 15:05:06");
+        System.out.println(flag);
     }
 }
