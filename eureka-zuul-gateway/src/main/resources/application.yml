@@ -13,12 +13,12 @@ eureka:
     instance-id: zuul-gateway
     prefer-ip-address: true     #访问路径可以显示IP地址
 
-#zuul:
-#  #ignored-services: microservicecloud-dept  #禁止真实服务名访问 单个
-#  prefix: /qin  #加入访问前缀
-#  ignored-services: "*"  #禁止真实服务名访问 所有
-#  routes:
-#    myprovider:
-#      serviceId: eureka-provider  #真实服务名
-#      path: /myprovider/**
+zuul:
+  #ignored-services: microservicecloud-dept  #禁止真实服务名访问 单个
+  prefix: /qin  #加入访问前缀
+  ignored-services: "*"  #禁止真实服务名访问 所有
+  routes:
+    myprovider:
+      serviceId: eureka-provider  #真实服务名
+      path: /myprovider/**
 
