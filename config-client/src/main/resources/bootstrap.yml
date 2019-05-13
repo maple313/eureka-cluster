@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: application-dev
+      profile: dev
+      label: master
+      uri: http://myconfig.com:5353
+
